@@ -1,0 +1,115 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-family-body);
+}
+
+@layer base {
+  :root {
+    --background: 60 56% 91%; /* Light Beige #F5F5DC */
+    --foreground: 30 20% 25%; /* Dark Brown/Grey */
+
+    --card: 60 56% 95%; /* Slightly Lighter Beige for cards */
+    --card-foreground: 30 20% 25%;
+
+    --popover: 60 56% 97%; /* Even Lighter Beige for popovers */
+    --popover-foreground: 30 20% 25%;
+
+    --primary: 120 39% 49%; /* Forest Green #4CAF50 */
+    --primary-foreground: 120 100% 98%; /* Light Green/White */
+
+    --secondary: 120 20% 88%; /* Light Muted Green */
+    --secondary-foreground: 120 40% 30%; /* Dark Green */
+
+    --muted: 60 40% 93%; /* Very Light Beige */
+    --muted-foreground: 60 30% 50%; /* Muted Beige Text */
+
+    --accent: 25 57% 38%; /* Earthy Brown #A0522D */
+    --accent-foreground: 25 100% 98%; /* Light Brown/White */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 60 40% 85%; /* Beige Border */
+    --input: 60 40% 88%; /* Beige Input Background */
+    --ring: 120 39% 49%; /* Primary for Focus Rings */
+
+    --radius: 0.5rem;
+
+    /* Chart colors - can be adjusted to fit the theme better if needed */
+    --chart-1: 120 39% 49%; /* Primary */
+    --chart-2: 25 57% 38%;  /* Accent */
+    --chart-3: 120 30% 60%; /* Lighter Primary */
+    --chart-4: 25 40% 50%;  /* Lighter Accent */
+    --chart-5: 60 40% 70%;  /* Neutral Beige tone */
+
+    /* Sidebar specific theme variables */
+    --sidebar-background: 60 50% 88%; /* A shade of beige for sidebar */
+    --sidebar-foreground: 30 20% 25%;
+    --sidebar-primary: 120 39% 49%;
+    --sidebar-primary-foreground: 120 100% 98%;
+    --sidebar-accent: 25 57% 38%;
+    --sidebar-accent-foreground: 25 100% 98%;
+    --sidebar-border: 60 30% 80%;
+    --sidebar-ring: 120 39% 49%;
+  }
+
+  .dark {
+    --background: 30 10% 22%; /* Was 15%, now lighter dark brown */
+    --foreground: 60 50% 85%; /* Was 80%, slightly brighter off-white */
+
+    --card: 30 10% 25%; /* Was 20%, lighter card background */
+    --card-foreground: 60 50% 85%; /* Consistent with main foreground */
+
+    --popover: 30 10% 27%; /* Was 22%, lighter popover background */
+    --popover-foreground: 60 50% 85%; /* Consistent with main foreground */
+
+    --primary: 120 39% 55%; /* Kept existing primary green brightness */
+    --primary-foreground: 120 60% 95%; /* Was 10%, now very light for contrast */
+
+    --secondary: 120 20% 30%; /* Was 25%, slightly lighter muted green */
+    --secondary-foreground: 120 40% 75%; /* Was 70%, adjusted for new secondary */
+
+    --muted: 30 10% 28%; /* Was 22%, lighter muted brown */
+    --muted-foreground: 30 20% 65%; /* Was 60%, lighter muted text */
+
+    --accent: 25 57% 50%; /* Was 45%, slightly brighter earthy brown */
+    --accent-foreground: 25 60% 95%; /* Was 10%, now very light for contrast */
+
+    --destructive: 0 62.8% 45%; /* Was 30.6%, brighter red for better visibility */
+    --destructive-foreground: 0 0% 98%; /* Kept for high contrast */
+
+    --border: 30 10% 35%; /* Was 30%, slightly lighter border */
+    --input: 30 10% 32%; /* Was 25%, lighter input background */
+    --ring: 120 39% 55%; /* Kept existing ring color */
+
+    /* Chart colors for dark theme - adjusted to match new primary/accent potentially */
+    --chart-1: 120 39% 55%; 
+    --chart-2: 25 57% 50%;  
+    --chart-3: 120 30% 65%; 
+    --chart-4: 25 40% 55%;  
+    --chart-5: 60 30% 60%;  
+
+    /* Sidebar specific theme variables for dark mode */
+    --sidebar-background: 30 10% 24%; /* Was 18%, lighter sidebar */
+    --sidebar-foreground: 60 50% 85%; /* Consistent with main foreground */
+    --sidebar-primary: 120 39% 55%; /* Consistent with main primary */
+    --sidebar-primary-foreground: 120 60% 95%; /* Consistent with main primary-foreground */
+    --sidebar-accent: 25 57% 50%; /* Consistent with main accent */
+    --sidebar-accent-foreground: 25 60% 95%; /* Consistent with main accent-foreground */
+    --sidebar-border: 30 10% 32%; /* Lighter sidebar border */
+    --sidebar-ring: 120 39% 55%; /* Consistent with main ring */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
